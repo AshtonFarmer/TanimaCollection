@@ -1,1 +1,1 @@
-Upload/replace index.html, style.css, and script.js. Fixes big empty hero space and makes Our First Year only show the 1st Year of Us card.
+Upload/replace index.html, style.css, and script.js. This removes the giant top sunset gap.
