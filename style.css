@@ -14,53 +14,24 @@ body{
   z-index:0;
   pointer-events:none;
   background:
-    radial-gradient(circle at 50% 30%, rgba(255,246,199,.90) 0 3.8%, rgba(255,202,128,.65) 7.5%, rgba(255,130,105,.30) 17%, transparent 29%),
-    radial-gradient(ellipse at 50% 58%, rgba(255,218,155,.34) 0 18%, rgba(255,132,112,.20) 32%, transparent 55%),
-    linear-gradient(180deg,#160821 0%,#33102e 20%,#82304b 42%,#ef815c 61%,#ffb774 69%,#5e2744 84%,#08040b 100%);
+    radial-gradient(circle at 50% 24%, rgba(255,238,186,.46), transparent 16%),
+    radial-gradient(circle at 50% 36%, rgba(255,151,100,.34), transparent 30%),
+    radial-gradient(circle at 18% 82%, rgba(255,88,148,.28), transparent 34%),
+    radial-gradient(circle at 85% 76%, rgba(132,119,255,.22), transparent 34%),
+    linear-gradient(180deg,#30112b 0%,#7b3542 35%,#ef8d5f 58%,#4a1836 82%,#08040b 100%);
 }
-
-.sunset-sky:before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(180deg, transparent 0 50%, rgba(255,232,178,.16) 54%, rgba(255,152,110,.10) 65%, transparent 78%),
-    repeating-linear-gradient(180deg, transparent 0 20px, rgba(255,235,190,.052) 21px, transparent 24px);
-  opacity:.72;
-  mask-image:linear-gradient(180deg, transparent 0%, black 38%, black 88%, transparent 100%);
-}
-
 .sunset-sky:after{
   content:"";
   position:absolute;
   inset:0;
   background:
-    radial-gradient(circle at 16% 22%,rgba(255,255,255,.78) 1px,transparent 2px),
-    radial-gradient(circle at 34% 15%,rgba(255,226,168,.68) 1px,transparent 2px),
-    radial-gradient(circle at 74% 18%,rgba(255,255,255,.62) 1px,transparent 2px),
-    radial-gradient(circle at 88% 30%,rgba(255,218,158,.55) 1px,transparent 2px),
-    radial-gradient(circle at 22% 78%,rgba(255,214,150,.34) 1px,transparent 2px),
-    radial-gradient(circle at 67% 86%,rgba(255,255,255,.30) 1px,transparent 2px);
-  background-size:220px 180px,260px 210px,310px 240px,280px 190px,360px 260px,420px 300px;
-  opacity:.32;
-  animation:starDrift 48s linear infinite;
+    radial-gradient(circle,rgba(255,255,255,.82) 1px,transparent 1.8px),
+    radial-gradient(circle,rgba(255,222,156,.70) 1px,transparent 2px);
+  background-size:84px 84px,145px 145px;
+  opacity:.28;
+  animation:starDrift 42s linear infinite;
 }
-
-body:before{
-  content:"";
-  position:fixed;
-  left:50%;
-  bottom:-18vh;
-  width:140vw;
-  height:48vh;
-  transform:translateX(-50%);
-  z-index:1;
-  pointer-events:none;
-  background:radial-gradient(ellipse at center, rgba(255,215,154,.26), rgba(255,126,106,.11) 38%, transparent 70%);
-  filter:blur(18px);
-}
-
-@keyframes starDrift{from{transform:translateY(0)}to{transform:translateY(-140px)}}to{transform:translateY(-180px)}}
+@keyframes starDrift{from{transform:translateY(0)}to{transform:translateY(-180px)}}
 .floating-light{
   position:fixed;
   z-index:1;
@@ -74,8 +45,8 @@ body:before{
 .light-two{width:230px;height:230px;right:5vw;top:44vh;background:rgba(255,104,165,.30);animation-delay:-3s}
 .light-three{width:160px;height:160px;left:45vw;bottom:8vh;background:rgba(255,228,165,.24);animation-delay:-6s}
 @keyframes floatGlow{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-28px) scale(1.08)}}
-.collection-page{position:relative;z-index:2;width:min(1240px,94vw);margin:0 auto;padding:26px 0 76px}
-.hero{min-height:68vh;display:grid;place-items:center;align-content:center;text-align:center;padding:42px 0}
+.collection-page{position:relative;z-index:2;width:min(1240px,94vw);margin:0 auto;padding:42px 0 76px}
+.hero{min-height:92vh;display:grid;place-items:center;align-content:center;text-align:center;padding:42px 0}
 .kicker,.section-heading p{
   margin:0 0 12px;color:#ffe0e8;text-transform:uppercase;letter-spacing:.31em;font-size:.78rem;font-weight:900;text-shadow:0 0 16px rgba(255,110,170,.65)
 }
@@ -83,7 +54,7 @@ body:before{
   margin:0;font-family:"Brush Script MT","Segoe Script",cursive;font-size:clamp(4rem,12vw,9rem);font-weight:400;line-height:.86;
   text-shadow:0 0 18px rgba(255,255,255,.95),0 0 48px rgba(255,102,165,.56),0 0 100px rgba(255,198,109,.25)
 }
-.hero-text{max-width:760px;margin:26px auto 0;color:#fff4f4;font-size:clamp(1.05rem,2.4vw,1.35rem);line-height:1.6;opacity:.95}
+.hero-text{max-width:760px;margin:26px auto 28px;color:#fff4f4;font-size:clamp(1.05rem,2.4vw,1.35rem);line-height:1.6;opacity:.95}
 .main-enter{
   display:inline-block;padding:16px 28px;border-radius:999px;color:white;text-decoration:none;font-weight:900;border:1px solid rgba(255,235,220,.78);
   background:linear-gradient(135deg,rgba(255,88,150,.62),rgba(255,183,98,.30));
@@ -126,12 +97,225 @@ body:before{
 .final-note h2{margin:0;font-family:"Brush Script MT","Segoe Script",cursive;font-size:clamp(2.6rem,7vw,5rem);font-weight:400}
 .final-note p{max-width:720px;margin:18px auto 0;color:#fff0f2;line-height:1.6;font-size:1.08rem;opacity:.92}
 @media(max-width:1050px){.birthday-world,.year-card{grid-template-columns:1fr}.sub-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:620px){.collection-page{width:min(94vw,520px);padding-top:26px}.hero{min-height:64vh}.section-card{padding:16px}.sub-grid{grid-template-columns:1fr}.feature-card{min-height:250px}}
+@media(max-width:620px){.collection-page{width:min(94vw,520px);padding-top:26px}.hero{min-height:88vh}.section-card{padding:16px}.sub-grid{grid-template-columns:1fr}.feature-card{min-height:250px}}
 
 
-/* Final spacing + first year cleanup */
-.collection-section{
-  scroll-margin-top:24px;
+/* Compact sunset title merge — no giant open space */
+.sunset-sky{
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 50% 17%, rgba(255,248,200,.92) 0 3.5%, rgba(255,199,118,.68) 7.5%, rgba(255,120,115,.30) 17%, transparent 29%),
+    radial-gradient(ellipse at 50% 31%, rgba(255,222,164,.32), transparent 36%),
+    linear-gradient(180deg,#160821 0%,#351131 24%,#85314c 43%,#ee805b 61%,#ffb774 70%,#5e2744 84%,#08040b 100%) !important;
+}
+
+.sunset-sky:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    repeating-linear-gradient(180deg, transparent 0 18px, rgba(255,235,190,.05) 19px, transparent 22px),
+    linear-gradient(180deg, transparent 0 45%, rgba(255,221,160,.16) 52%, rgba(255,142,105,.10) 64%, transparent 78%);
+  opacity:.7;
+  mask-image:linear-gradient(180deg, black 0%, black 78%, transparent 100%);
+}
+
+.sunset-sky:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 16% 18%,rgba(255,255,255,.78) 1px,transparent 2px),
+    radial-gradient(circle at 34% 12%,rgba(255,226,168,.68) 1px,transparent 2px),
+    radial-gradient(circle at 74% 16%,rgba(255,255,255,.62) 1px,transparent 2px),
+    radial-gradient(circle at 88% 27%,rgba(255,218,158,.55) 1px,transparent 2px);
+  background-size:220px 180px,260px 210px,310px 240px,280px 190px;
+  opacity:.30;
+  animation:starDrift 48s linear infinite;
+}
+
+body:before{
+  content:"";
+  position:fixed;
+  left:50%;
+  top:250px;
+  width:112vw;
+  height:260px;
+  transform:translateX(-50%);
+  z-index:1;
+  pointer-events:none;
+  background:radial-gradient(ellipse at center, rgba(255,215,154,.22), rgba(255,126,106,.09) 42%, transparent 72%);
+  filter:blur(16px);
+}
+
+.collection-page{
+  padding-top:0 !important;
+}
+
+.hero{
+  min-height:auto !important;
+  height:auto !important;
+  padding:54px 0 18px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:flex-start !important;
+  align-items:center !important;
+  text-align:center !important;
+}
+
+.hero .kicker{
+  margin-bottom:4px !important;
+}
+
+.hero h1{
+  margin:0 !important;
+  font-size:clamp(3.8rem,10vw,8.1rem) !important;
+  transform:none !important;
+}
+
+.hero-text{
+  margin:14px auto 0 !important;
+  max-width:760px !important;
+}
+
+.collection-section:first-of-type{
+  margin-top:18px !important;
+}
+
+.compact-jeep-scene{
+  position:relative;
+  width:min(620px,88vw);
+  height:118px;
+  margin:18px auto 0;
+  z-index:3;
+  pointer-events:none;
+}
+
+.mini-hill{
+  position:absolute;
+  left:50%;
+  bottom:0;
+  width:105%;
+  height:38px;
+  transform:translateX(-50%);
+  background:radial-gradient(ellipse at center, rgba(0,0,0,.86) 0 58%, transparent 72%);
+  border-radius:50% 50% 0 0;
+}
+
+.mini-jeep{
+  position:absolute;
+  left:50%;
+  bottom:22px;
+  width:min(360px,76vw);
+  height:82px;
+  transform:translateX(-50%);
+  filter:drop-shadow(0 0 15px rgba(0,0,0,.55)) drop-shadow(0 0 18px rgba(255,190,110,.12));
+}
+
+.mini-body{
+  position:absolute;
+  left:8%;
+  bottom:18px;
+  width:84%;
+  height:38px;
+  border-radius:14px 25px 12px 12px;
+  background:#050305;
+}
+
+.mini-top{
+  position:absolute;
+  left:30%;
+  bottom:51px;
+  width:38%;
+  height:25px;
+  border-radius:13px 13px 5px 5px;
+  background:#050305;
+  transform:skewX(-9deg);
+}
+
+.mini-hood{
+  position:absolute;
+  right:7%;
+  bottom:30px;
+  width:22%;
+  height:24px;
+  border-radius:8px 22px 10px 8px;
+  background:#050305;
+  transform:skewX(14deg);
+}
+
+.mini-wheel{
+  position:absolute;
+  bottom:3px;
+  width:43px;
+  height:43px;
+  border-radius:50%;
+  background:#020102;
+  border:7px solid #050305;
+  box-shadow:inset 0 0 0 6px #151013;
+}
+
+.w1{left:19%}
+.w2{right:19%}
+
+.mini-couple{
+  position:absolute;
+  left:50%;
+  bottom:78px;
+  width:90px;
+  height:55px;
+  transform:translateX(-50%);
+  z-index:4;
+}
+
+.mini-person{
+  position:absolute;
+  bottom:0;
+  width:22px;
+  height:42px;
+  background:#040204;
+  border-radius:12px 12px 7px 7px;
+}
+
+.mini-person:before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:-18px;
+  width:20px;
+  height:20px;
+  transform:translateX(-50%);
+  border-radius:50%;
+  background:#040204;
+}
+
+.mini-person.left{
+  left:22px;
+  transform:rotate(-7deg);
+}
+
+.mini-person.right{
+  right:22px;
+  transform:rotate(7deg);
+}
+
+.jeep-heart{
+  position:absolute;
+  left:50%;
+  top:0;
+  transform:translateX(-50%);
+  font-size:1.55rem;
+  color:rgba(255,240,236,.92);
+  text-shadow:0 0 14px rgba(255,115,170,.75),0 0 30px rgba(255,185,115,.30);
+  animation:heartFloat 3.4s ease-in-out infinite;
+}
+
+@keyframes heartFloat{
+  0%,100%{transform:translateX(-50%) translateY(0) scale(1)}
+  50%{transform:translateX(-50%) translateY(-7px) scale(1.08)}
 }
 
 .single-year-card{
@@ -142,304 +326,34 @@ body:before{
 
 .first-year-only{
   width:min(720px,100%);
-  min-height:260px;
-  text-align:left;
+  min-height:250px;
 }
 
 @media(max-width:620px){
-  .first-year-only{
-    min-height:230px;
-  }
-}
-
-
-/* Jeep sunset cover upgrade */
-.hero{
-  min-height:100vh !important;
-  padding:54px 0 0 !important;
-  display:flex !important;
-  flex-direction:column;
-  justify-content:center !important;
-  align-items:center !important;
-  text-align:center;
-  position:relative;
-  overflow:visible;
-}
-
-.hero .kicker{
-  margin-top:0 !important;
-}
-
-.hero h1{
-  position:relative;
-  z-index:3;
-  font-size:clamp(4.6rem,12vw,9.6rem) !important;
-  transform:translateY(-8px);
-}
-
-.hero-text{
-  position:relative;
-  z-index:3;
-  margin:18px auto 0 !important;
-  max-width:760px;
-}
-
-.collection-section:first-of-type{
-  margin-top:22px !important;
-}
-
-.jeep-sunset-scene{
-  position:relative;
-  z-index:3;
-  width:min(900px,92vw);
-  height:210px;
-  margin:34px auto 0;
-  pointer-events:none;
-}
-
-.hill{
-  position:absolute;
-  left:50%;
-  bottom:0;
-  width:105%;
-  height:72px;
-  transform:translateX(-50%);
-  background:
-    radial-gradient(ellipse at center, rgba(0,0,0,.88) 0 58%, transparent 70%);
-  border-radius:50% 50% 0 0;
-  filter:blur(.2px);
-}
-
-.jeep-silhouette{
-  position:absolute;
-  left:50%;
-  bottom:44px;
-  width:min(520px,82vw);
-  height:124px;
-  transform:translateX(-50%);
-  filter:
-    drop-shadow(0 0 18px rgba(0,0,0,.55))
-    drop-shadow(0 0 22px rgba(255,180,110,.13));
-}
-
-.jeep-body{
-  position:absolute;
-  left:8%;
-  bottom:25px;
-  width:84%;
-  height:58px;
-  border-radius:18px 34px 16px 16px;
-  background:#050305;
-}
-
-.jeep-body:before{
-  content:"";
-  position:absolute;
-  left:4%;
-  top:18px;
-  width:15px;
-  height:10px;
-  border-radius:8px;
-  background:rgba(255,210,130,.22);
-  box-shadow:330px 0 0 rgba(255,210,130,.20);
-}
-
-.jeep-top{
-  position:absolute;
-  left:29%;
-  bottom:75px;
-  width:39%;
-  height:38px;
-  border-radius:18px 18px 6px 6px;
-  background:#050305;
-  transform:skewX(-9deg);
-}
-
-.jeep-hood{
-  position:absolute;
-  right:6%;
-  bottom:42px;
-  width:22%;
-  height:36px;
-  border-radius:10px 30px 12px 8px;
-  background:#050305;
-  transform:skewX(14deg);
-}
-
-.jeep-window{
-  position:absolute;
-  bottom:84px;
-  height:22px;
-  border-radius:7px;
-  background:rgba(255,185,118,.16);
-  border:2px solid #050305;
-}
-
-.front-window{
-  left:50%;
-  width:15%;
-  transform:skewX(-10deg);
-}
-
-.rear-window{
-  left:34%;
-  width:14%;
-  transform:skewX(-10deg);
-}
-
-.wheel{
-  position:absolute;
-  bottom:4px;
-  width:64px;
-  height:64px;
-  border-radius:50%;
-  background:#020102;
-  border:10px solid #050305;
-  box-shadow:inset 0 0 0 8px #151013;
-}
-
-.wheel:after{
-  content:"";
-  position:absolute;
-  inset:13px;
-  border-radius:50%;
-  background:#020102;
-  border:3px solid rgba(255,196,130,.10);
-}
-
-.wheel-one{
-  left:18%;
-}
-
-.wheel-two{
-  right:18%;
-}
-
-.couple-silhouette{
-  position:absolute;
-  left:50%;
-  bottom:124px;
-  width:135px;
-  height:92px;
-  transform:translateX(-50%);
-  z-index:4;
-}
-
-.person{
-  position:absolute;
-  bottom:0;
-  width:34px;
-  height:70px;
-  background:#040204;
-  border-radius:16px 16px 10px 10px;
-}
-
-.person:before{
-  content:"";
-  position:absolute;
-  left:50%;
-  top:-27px;
-  width:31px;
-  height:31px;
-  transform:translateX(-50%);
-  border-radius:50%;
-  background:#040204;
-}
-
-.person-left{
-  left:34px;
-  transform:rotate(-7deg);
-}
-
-.person-right{
-  right:34px;
-  transform:rotate(7deg);
-}
-
-.person-left:after,
-.person-right:after{
-  content:"";
-  position:absolute;
-  top:22px;
-  width:45px;
-  height:13px;
-  border-radius:999px;
-  background:#040204;
-}
-
-.person-left:after{
-  right:-35px;
-  transform:rotate(18deg);
-}
-
-.person-right:after{
-  left:-35px;
-  transform:rotate(-18deg);
-}
-
-.tiny-heart{
-  position:absolute;
-  left:50%;
-  top:10px;
-  transform:translateX(-50%);
-  font-size:2rem;
-  color:rgba(255,234,230,.92);
-  text-shadow:
-    0 0 14px rgba(255,115,170,.75),
-    0 0 34px rgba(255,185,115,.34);
-  animation:heartFloat 3.4s ease-in-out infinite;
-}
-
-@keyframes heartFloat{
-  0%,100%{transform:translateX(-50%) translateY(0) scale(1)}
-  50%{transform:translateX(-50%) translateY(-10px) scale(1.08)}
-}
-
-@media(max-width:720px){
   .hero{
-    min-height:100vh !important;
-    padding-top:38px !important;
+    padding:36px 0 14px !important;
   }
 
-  .jeep-sunset-scene{
-    height:170px;
-    margin-top:24px;
+  .hero h1{
+    font-size:clamp(3.2rem,15vw,5.2rem) !important;
   }
 
-  .jeep-silhouette{
-    width:92vw;
+  .compact-jeep-scene{
+    height:104px;
+    margin-top:14px;
+  }
+
+  .mini-jeep{
     transform:translateX(-50%) scale(.82);
-    bottom:30px;
+    bottom:16px;
   }
 
-  .couple-silhouette{
-    transform:translateX(-50%) scale(.78);
-    bottom:92px;
+  .mini-couple{
+    transform:translateX(-50%) scale(.80);
+    bottom:66px;
   }
 
-  .hill{
-    height:58px;
-  }
-}
-
-@media(max-height:760px){
-  .hero{
-    min-height:auto !important;
-    padding:42px 0 18px !important;
-  }
-
-  .jeep-sunset-scene{
-    height:160px;
-    margin-top:18px;
-  }
-
-  .jeep-silhouette{
-    transform:translateX(-50%) scale(.82);
-    bottom:28px;
-  }
-
-  .couple-silhouette{
-    transform:translateX(-50%) scale(.78);
-    bottom:92px;
+  .collection-section:first-of-type{
+    margin-top:8px !important;
   }
 }

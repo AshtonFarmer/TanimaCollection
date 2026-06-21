@@ -1,1 +1,1 @@
-Upload/replace index.html, style.css, and script.js. Adds title in sunset cover plus Jeep/couple silhouette.
+Upload/replace index.html, style.css, and script.js. Compact sunset title with Jeep and no giant space.
