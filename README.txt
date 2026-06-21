@@ -1,1 +1,1 @@
-Upload/replace index.html, style.css, and script.js. Removed Open Collection button and improved the sunset background.
+Upload/replace index.html, style.css, and script.js. Fixes big empty hero space and makes Our First Year only show the 1st Year of Us card.
