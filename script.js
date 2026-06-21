@@ -5,7 +5,6 @@ document.querySelectorAll('.feature-card, .sub-card').forEach(card => {
     const y = ((event.clientY - rect.top) / rect.height - .5) * -8;
     card.style.transform = `translateY(-5px) rotateX(${y}deg) rotateY(${x}deg)`;
   });
-
   card.addEventListener('pointerleave', () => {
     card.style.transform = '';
   });

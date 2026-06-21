@@ -1,1 +1,1 @@
-Upload index.html, style.css, and script.js to a new GitHub Pages repo.
+Upload/replace index.html, style.css, and script.js. Removed Open Collection button and improved the sunset background.
