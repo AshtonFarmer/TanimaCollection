@@ -1,1 +1,1 @@
-Upload/replace index.html, style.css, and script.js. This removes the giant top sunset gap.
+Upload/replace index.html, style.css, and script.js. Adds title in sunset cover plus Jeep/couple silhouette.

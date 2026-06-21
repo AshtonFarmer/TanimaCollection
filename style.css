@@ -153,27 +153,293 @@ body:before{
 }
 
 
-/* Remove the giant top sunset gap */
+/* Jeep sunset cover upgrade */
 .hero{
-  min-height:auto !important;
-  padding:80px 0 56px !important;
-  align-content:start !important;
+  min-height:100vh !important;
+  padding:54px 0 0 !important;
+  display:flex !important;
+  flex-direction:column;
+  justify-content:center !important;
+  align-items:center !important;
+  text-align:center;
+  position:relative;
+  overflow:visible;
 }
 
-.collection-page{
-  padding-top:0 !important;
-}
-
-.hero h1{
+.hero .kicker{
   margin-top:0 !important;
 }
 
-.hero-text{
-  margin-bottom:0 !important;
+.hero h1{
+  position:relative;
+  z-index:3;
+  font-size:clamp(4.6rem,12vw,9.6rem) !important;
+  transform:translateY(-8px);
 }
 
-@media(max-width:620px){
+.hero-text{
+  position:relative;
+  z-index:3;
+  margin:18px auto 0 !important;
+  max-width:760px;
+}
+
+.collection-section:first-of-type{
+  margin-top:22px !important;
+}
+
+.jeep-sunset-scene{
+  position:relative;
+  z-index:3;
+  width:min(900px,92vw);
+  height:210px;
+  margin:34px auto 0;
+  pointer-events:none;
+}
+
+.hill{
+  position:absolute;
+  left:50%;
+  bottom:0;
+  width:105%;
+  height:72px;
+  transform:translateX(-50%);
+  background:
+    radial-gradient(ellipse at center, rgba(0,0,0,.88) 0 58%, transparent 70%);
+  border-radius:50% 50% 0 0;
+  filter:blur(.2px);
+}
+
+.jeep-silhouette{
+  position:absolute;
+  left:50%;
+  bottom:44px;
+  width:min(520px,82vw);
+  height:124px;
+  transform:translateX(-50%);
+  filter:
+    drop-shadow(0 0 18px rgba(0,0,0,.55))
+    drop-shadow(0 0 22px rgba(255,180,110,.13));
+}
+
+.jeep-body{
+  position:absolute;
+  left:8%;
+  bottom:25px;
+  width:84%;
+  height:58px;
+  border-radius:18px 34px 16px 16px;
+  background:#050305;
+}
+
+.jeep-body:before{
+  content:"";
+  position:absolute;
+  left:4%;
+  top:18px;
+  width:15px;
+  height:10px;
+  border-radius:8px;
+  background:rgba(255,210,130,.22);
+  box-shadow:330px 0 0 rgba(255,210,130,.20);
+}
+
+.jeep-top{
+  position:absolute;
+  left:29%;
+  bottom:75px;
+  width:39%;
+  height:38px;
+  border-radius:18px 18px 6px 6px;
+  background:#050305;
+  transform:skewX(-9deg);
+}
+
+.jeep-hood{
+  position:absolute;
+  right:6%;
+  bottom:42px;
+  width:22%;
+  height:36px;
+  border-radius:10px 30px 12px 8px;
+  background:#050305;
+  transform:skewX(14deg);
+}
+
+.jeep-window{
+  position:absolute;
+  bottom:84px;
+  height:22px;
+  border-radius:7px;
+  background:rgba(255,185,118,.16);
+  border:2px solid #050305;
+}
+
+.front-window{
+  left:50%;
+  width:15%;
+  transform:skewX(-10deg);
+}
+
+.rear-window{
+  left:34%;
+  width:14%;
+  transform:skewX(-10deg);
+}
+
+.wheel{
+  position:absolute;
+  bottom:4px;
+  width:64px;
+  height:64px;
+  border-radius:50%;
+  background:#020102;
+  border:10px solid #050305;
+  box-shadow:inset 0 0 0 8px #151013;
+}
+
+.wheel:after{
+  content:"";
+  position:absolute;
+  inset:13px;
+  border-radius:50%;
+  background:#020102;
+  border:3px solid rgba(255,196,130,.10);
+}
+
+.wheel-one{
+  left:18%;
+}
+
+.wheel-two{
+  right:18%;
+}
+
+.couple-silhouette{
+  position:absolute;
+  left:50%;
+  bottom:124px;
+  width:135px;
+  height:92px;
+  transform:translateX(-50%);
+  z-index:4;
+}
+
+.person{
+  position:absolute;
+  bottom:0;
+  width:34px;
+  height:70px;
+  background:#040204;
+  border-radius:16px 16px 10px 10px;
+}
+
+.person:before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:-27px;
+  width:31px;
+  height:31px;
+  transform:translateX(-50%);
+  border-radius:50%;
+  background:#040204;
+}
+
+.person-left{
+  left:34px;
+  transform:rotate(-7deg);
+}
+
+.person-right{
+  right:34px;
+  transform:rotate(7deg);
+}
+
+.person-left:after,
+.person-right:after{
+  content:"";
+  position:absolute;
+  top:22px;
+  width:45px;
+  height:13px;
+  border-radius:999px;
+  background:#040204;
+}
+
+.person-left:after{
+  right:-35px;
+  transform:rotate(18deg);
+}
+
+.person-right:after{
+  left:-35px;
+  transform:rotate(-18deg);
+}
+
+.tiny-heart{
+  position:absolute;
+  left:50%;
+  top:10px;
+  transform:translateX(-50%);
+  font-size:2rem;
+  color:rgba(255,234,230,.92);
+  text-shadow:
+    0 0 14px rgba(255,115,170,.75),
+    0 0 34px rgba(255,185,115,.34);
+  animation:heartFloat 3.4s ease-in-out infinite;
+}
+
+@keyframes heartFloat{
+  0%,100%{transform:translateX(-50%) translateY(0) scale(1)}
+  50%{transform:translateX(-50%) translateY(-10px) scale(1.08)}
+}
+
+@media(max-width:720px){
   .hero{
-    padding:54px 0 42px !important;
+    min-height:100vh !important;
+    padding-top:38px !important;
+  }
+
+  .jeep-sunset-scene{
+    height:170px;
+    margin-top:24px;
+  }
+
+  .jeep-silhouette{
+    width:92vw;
+    transform:translateX(-50%) scale(.82);
+    bottom:30px;
+  }
+
+  .couple-silhouette{
+    transform:translateX(-50%) scale(.78);
+    bottom:92px;
+  }
+
+  .hill{
+    height:58px;
+  }
+}
+
+@media(max-height:760px){
+  .hero{
+    min-height:auto !important;
+    padding:42px 0 18px !important;
+  }
+
+  .jeep-sunset-scene{
+    height:160px;
+    margin-top:18px;
+  }
+
+  .jeep-silhouette{
+    transform:translateX(-50%) scale(.82);
+    bottom:28px;
+  }
+
+  .couple-silhouette{
+    transform:translateX(-50%) scale(.78);
+    bottom:92px;
   }
 }
