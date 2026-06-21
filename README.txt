@@ -1,0 +1,1 @@
+Upload index.html, style.css, and script.js to a new GitHub Pages repo.

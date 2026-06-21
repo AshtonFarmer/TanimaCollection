@@ -1,0 +1,218 @@
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  min-height:100vh;
+  color:#fff7f3;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  background:
+    radial-gradient(circle at 50% 8%,rgba(255,192,145,.22),transparent 28%),
+    radial-gradient(circle at 12% 82%,rgba(255,100,170,.16),transparent 34%),
+    radial-gradient(circle at 88% 78%,rgba(140,190,255,.13),transparent 34%),
+    linear-gradient(180deg,#160711 0%,#08040b 55%,#020104 100%);
+  overflow-x:hidden;
+}
+.stars{
+  position:fixed;
+  inset:-120px;
+  pointer-events:none;
+  opacity:.28;
+  background-image:
+    radial-gradient(circle,rgba(255,255,255,.9) 1px,transparent 1.7px),
+    radial-gradient(circle,rgba(255,210,140,.7) 1px,transparent 2px);
+  background-size:70px 70px,130px 130px;
+  animation:starDrift 35s linear infinite;
+  z-index:0;
+}
+@keyframes starDrift{from{transform:translateY(0)}to{transform:translateY(-180px)}}
+.collection-page{
+  position:relative;
+  z-index:2;
+  width:min(1180px,94vw);
+  margin:0 auto;
+  padding:42px 0 70px;
+}
+.hero{
+  min-height:92vh;
+  display:grid;
+  place-items:center;
+  align-content:center;
+  text-align:center;
+  padding:42px 0;
+}
+.kicker,.section-heading p{
+  margin:0 0 12px;
+  color:#ffd8e8;
+  text-transform:uppercase;
+  letter-spacing:.28em;
+  font-size:.78rem;
+  font-weight:800;
+  text-shadow:0 0 16px rgba(255,125,180,.55);
+}
+.hero h1{
+  margin:0;
+  font-family:"Brush Script MT","Segoe Script",cursive;
+  font-size:clamp(4rem,12vw,9rem);
+  font-weight:400;
+  line-height:.86;
+  text-shadow:0 0 18px rgba(255,255,255,.9),0 0 46px rgba(255,130,180,.58),0 0 90px rgba(255,190,110,.20);
+}
+.hero-text{
+  max-width:760px;
+  margin:26px auto 28px;
+  color:#fff0f7;
+  font-size:clamp(1.05rem,2.4vw,1.35rem);
+  line-height:1.6;
+  opacity:.92;
+}
+.main-enter{
+  display:inline-block;
+  padding:16px 28px;
+  border-radius:999px;
+  color:white;
+  text-decoration:none;
+  font-weight:900;
+  border:1px solid rgba(255,235,220,.75);
+  background:linear-gradient(135deg,rgba(255,100,160,.58),rgba(255,190,120,.22));
+  box-shadow:0 0 25px rgba(255,120,180,.48),0 0 52px rgba(255,190,120,.18),inset 0 0 14px rgba(255,255,255,.10);
+}
+.collection-section,.subsection,.timeline,.final-note{margin:48px 0}
+.section-heading{text-align:center;margin-bottom:28px}
+.section-heading h2{
+  margin:0;
+  font-family:"Brush Script MT","Segoe Script",cursive;
+  font-size:clamp(2.6rem,7vw,5.2rem);
+  font-weight:400;
+  line-height:.95;
+  text-shadow:0 0 22px rgba(255,255,255,.42);
+}
+.universe-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+.universe-card{
+  position:relative;
+  min-height:295px;
+  padding:24px;
+  border-radius:30px;
+  color:white;
+  text-decoration:none;
+  overflow:hidden;
+  background:radial-gradient(circle at top,rgba(255,255,255,.16),transparent 40%),linear-gradient(180deg,rgba(255,255,255,.11),rgba(255,255,255,.045));
+  border:1px solid rgba(255,235,220,.20);
+  box-shadow:0 18px 55px rgba(0,0,0,.38),inset 0 0 24px rgba(255,255,255,.045);
+  backdrop-filter:blur(7px);
+  transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+.universe-card:hover{
+  transform:translateY(-8px) scale(1.015);
+  border-color:rgba(255,235,220,.42);
+  box-shadow:0 24px 70px rgba(0,0,0,.48),0 0 32px rgba(255,130,180,.20),inset 0 0 26px rgba(255,255,255,.06);
+}
+.birthday-card{background:radial-gradient(circle at 50% 10%,rgba(255,210,120,.24),transparent 34%),linear-gradient(135deg,rgba(255,100,160,.22),rgba(255,190,120,.10))}
+.locked{opacity:.78}
+.icon{display:block;font-size:2.4rem;margin-bottom:16px}
+.universe-card h3{margin:0 0 12px;font-size:1.35rem}
+.universe-card p{margin:0;color:#fff0f7;line-height:1.5;opacity:.9}
+.enter{position:absolute;left:24px;bottom:22px;color:#ffe5ef;font-weight:900}
+.sub-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+.sub-card{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  padding:20px;
+  border-radius:24px;
+  color:white;
+  text-decoration:none;
+  background:rgba(255,255,255,.075);
+  border:1px solid rgba(255,255,255,.13);
+  box-shadow:0 12px 38px rgba(0,0,0,.25);
+  transition:transform .28s ease, background .28s ease, border-color .28s ease;
+}
+.sub-card:hover{
+  transform:translateY(-5px);
+  background:rgba(255,255,255,.11);
+  border-color:rgba(255,230,220,.32);
+}
+.sub-card strong{font-size:1.05rem}
+.sub-card span{color:#ffe9f2;opacity:.86}
+.private-card{background:linear-gradient(135deg,rgba(255,95,150,.18),rgba(255,190,120,.08))}
+.timeline-line{
+  position:relative;
+  display:grid;
+  gap:18px;
+  max-width:820px;
+  margin:0 auto;
+}
+.timeline-line:before{
+  content:"";
+  position:absolute;
+  left:26px;
+  top:20px;
+  bottom:20px;
+  width:2px;
+  background:linear-gradient(180deg,rgba(255,150,190,.65),rgba(255,210,130,.20));
+}
+.moment{
+  position:relative;
+  padding:22px 22px 22px 74px;
+  border-radius:24px;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.12);
+}
+.moment span{
+  position:absolute;
+  left:0;
+  top:20px;
+  width:54px;
+  height:54px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  font-weight:900;
+  background:linear-gradient(135deg,rgba(255,120,175,.70),rgba(255,195,110,.45));
+  border:1px solid rgba(255,235,220,.45);
+  box-shadow:0 0 20px rgba(255,120,180,.25);
+}
+.moment h3{margin:0 0 8px}
+.moment p{margin:0;color:#fff0f7;line-height:1.5;opacity:.88}
+.coming{opacity:.72}
+.final-note{
+  text-align:center;
+  padding:46px 24px;
+  border-radius:34px;
+  background:radial-gradient(circle at top,rgba(255,210,150,.16),transparent 42%),rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.14);
+}
+.final-note h2{
+  margin:0;
+  font-family:"Brush Script MT","Segoe Script",cursive;
+  font-size:clamp(2.5rem,7vw,5rem);
+  font-weight:400;
+}
+.final-note p{
+  max-width:720px;
+  margin:18px auto 0;
+  color:#fff0f7;
+  line-height:1.6;
+  font-size:1.08rem;
+  opacity:.92;
+}
+@media(max-width:980px){
+  .universe-grid{grid-template-columns:repeat(2,1fr)}
+  .sub-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:620px){
+  .collection-page{width:min(94vw,520px);padding-top:26px}
+  .hero{min-height:88vh}
+  .universe-grid,.sub-grid{grid-template-columns:1fr}
+  .universe-card{min-height:240px}
+  .timeline-line:before{left:20px}
+  .moment{padding-left:62px}
+  .moment span{width:42px;height:42px}
+}
