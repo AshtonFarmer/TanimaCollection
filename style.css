@@ -357,3 +357,30 @@ body:before{
     margin-top:8px !important;
   }
 }
+
+
+/* Anniversary Farm final replacement */
+.single-year-card{
+  display:flex !important;
+  justify-content:center !important;
+  align-items:stretch !important;
+}
+
+.first-year-only{
+  width:min(760px,100%) !important;
+  min-height:270px !important;
+  display:block;
+}
+
+.first-year-only b{
+  position:absolute;
+  left:28px;
+  bottom:24px;
+  color:#ffe6ec;
+}
+
+@media(max-width:620px){
+  .first-year-only{
+    min-height:245px !important;
+  }
+}

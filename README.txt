@@ -1,1 +1,1 @@
-Upload/replace index.html, style.css, and script.js. Compact sunset title with Jeep and no giant space.
+These are the REAL replacement files. Upload/replace ONLY index.html, style.css, and script.js. Do not upload this README if you do not want extra files.
